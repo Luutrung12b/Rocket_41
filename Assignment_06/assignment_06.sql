@@ -301,7 +301,7 @@ BEGIN
         SELECT TypeID FROM Question
         GROUP BY TypeID
         ORDER BY COUNT(*) DESC
-        LIMIT 1
+       
     );
 END $$
 DELIMITER ;
@@ -316,7 +316,7 @@ CREATE PROCEDURE sp_tim_loai_cau_hoi_theo_id(IN p_in_TypeID TINYINT , OUT p_out_
 BEGIN
     SELECT TypeName INTO p_out_TypeName FROM typequestion
     WHERE TypeID = p_in_TypeID
-   -- LIMIT 1
+
     ;
 END $$
 DELIMITER ;
@@ -379,7 +379,7 @@ CREATE PROCEDURE sp_xoa_exam_theo_id(IN p_in_ExamID TINYINT)
 BEGIN
     DECLARE affectedRows INT;
     
-    -- Xóa đề thi từ bảng exam
+  
     DELETE FROM exam
     WHERE examID = p_in_ExamID;
     
