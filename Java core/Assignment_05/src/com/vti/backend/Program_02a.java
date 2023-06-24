@@ -21,7 +21,7 @@ public class Program_02a {
 		while (true) {
 			System.out.println("Choose function");
 			System.out.println("1. Create 10 students and devide them into 3 groups");
-			System.out.println("2. Kêu gọi cả lớp điểm danh.");
+			System.out.println("2. Everyone Assemble.");
 			System.out.println("3. Ask Group1 to learn");
 			System.out.println("4. Ask Group2 to clean");
 			System.out.println("5. Print Student list");
@@ -70,7 +70,7 @@ public class Program_02a {
 		nameList.add("BMP Terminator");
 		nameList.add("T72 B3");
 
-		for (String name : nameList) {// duyệt mảng tên sinh viên ở trên
+		for (String name : nameList) {
 			Random random = new Random();
 			int group = random.nextInt(3) + 1;
 			Student student = new Student(studentList.size() + 1, "Main battle tank " + name, group);
@@ -93,7 +93,7 @@ public class Program_02a {
 			}
 		}
 		if (isCheck == false) {
-			System.out.println("Không có bạn nào trong nhóm 1");
+			System.out.println("Nobody be in Group 1");
 		}
 	}
 
@@ -106,7 +106,7 @@ public class Program_02a {
 			}
 		}
 		if (isCheck == false) {
-			System.out.println("Không có bạn nào trong nhóm 2");
+			System.out.println("Nobody be in Group 2");
 		}
 	}
 
